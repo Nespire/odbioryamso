@@ -1,0 +1,43 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;  
+      text-align: center;
+  }
+  
+  input{
+      height: 15vh;
+      font-size:4rem;
+  }
+  .decision{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width:50vw;
+  }
+  label{
+      width:50%;
+      height: 10vh;
+      font-size:1rem;
+  }
+  label:hover{
+      background-color:orange;
+      transition: 0.3s;
+  }
+  .container{
+      display:flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+  
+  }
+  button{
+      width:50vw;
+      height: 10vh;
+      font-size:1.5rem;
+  }
+  i{
+      font-size:5rem;
+      margin-top:150px;
+  }
+  

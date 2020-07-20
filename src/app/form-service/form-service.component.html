@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="logo">
+    <img src="../assets/amso_logo.png" alt="">
+  </div>
+  <form nz-form [nzLayout]="''" [formGroup]="validateForm" (ngSubmit)="submitForm()">
+
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Potrzebujemy twojego numeru zamówienia!">
+        <nz-input-group >
+          <input formControlName="number" nz-input placeholder="Wpisz tutaj numer RMA" />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+
+    <nz-form-item>
+      <nz-radio-group formControlName="decision" class="decision">
+        <label nz-radio nzValue="Chce tylko odebrac RMA">Chcę tylko odebrać sprzęt</label>
+        <label nz-radio nzValue="Chce odebrac RMA i potrzebuje pomocy sprzedawcy">Chcę odebrać sprzęt i mam dodatkowe
+          pytania</label>
+      </nz-radio-group>
+    </nz-form-item>
+
+
+    <nz-form-item>
+      <nz-form-control>
+        <button nz-button nzType="primary" [disabled]="!validateForm.valid">Wyślij</button>
+      </nz-form-control>
+    </nz-form-item>
+
+  </form>
+
+  <i nz-icon nzType="rollback" nzTheme="outline" [routerLink]="['/main']"></i>
+</div>

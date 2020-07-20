@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="logo">
+      <img src="../assets/amso_logo.png" alt="">
+    </div>
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Potrzebujemy twojego numeru zamówienia!">
+          <nz-input-group>
+            <input formControlName="number" nz-input placeholder="Wpisz tutaj numer zamówienia" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+
+
+      <nz-form-item>
+        <nz-radio-group formControlName="decision" class="decision">
+          <label nz-radio nzValue="Chce tylko odebrac zamowienie"><span>Chcę tylko odebrać zamówienie</span>
+            </label>
+          <label nz-radio nzValue="Chce odebrac zamowienie i potrzebuje pomocy sprzedawcy">Chcę odebrać zamówienie i mam
+            dodatkowe pytania</label>
+        </nz-radio-group>
+      </nz-form-item>
+
+
+      <nz-form-item>
+        <nz-form-control>
+          <button nz-button nzType="primary" [disabled]="!validateForm.valid">Wyślij</button>
+        </nz-form-control>
+      </nz-form-item>
+
+    </form>
+
+    <i nz-icon nzType="rollback" nzTheme="outline" [routerLink]="['/main']"></i>
+  </div>

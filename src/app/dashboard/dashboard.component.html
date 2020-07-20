@@ -1,0 +1,25 @@
+<a [routerLink]="['/main']">Strona główna</a>
+
+<div nz-row>
+    <div nz-col nzSpan="12">
+        <p style="font-size:3rem; text-align:center;">Zamówienia do odbioru</p>
+        <div *ngFor="let order of listOfOrder" class="item">
+            <p> <b>Numer zamówienia:</b> {{ order.number | json }}
+            </p>
+            <p> <b>Info:</b> {{ order.decision | json }}
+            </p>
+            <a (click)=deleteOrder(order.id)>Usuń</a>
+        </div>
+    </div>
+    <div nz-col nzSpan="12">
+        <p style="font-size:3rem; text-align:center;">RMA do odbioru</p>
+
+        <div *ngFor="let rma of listOfRMA " class="item">
+            <p> <b>Numer RMA:</b> {{ rma.number | json }}
+            </p>
+            <p> <b>Info:</b> {{ rma.decision | json }}
+            </p>
+            <a (click)=deleteRMA(rma.id)>Usuń</a>
+        </div>
+    </div>
+</div>

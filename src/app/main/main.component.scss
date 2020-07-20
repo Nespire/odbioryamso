@@ -1,0 +1,44 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.choose {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &_order {
+    border-radius: 50px;
+    font-size: 3rem;
+    border: none;
+    color: black;
+    border: 1px solid black;
+  }
+
+  &_service {
+    border-radius: 50px;
+
+    font-size: 3rem;
+    border: none;
+    color: black;
+    border: 1px solid black;
+  }
+}
+
+a {
+  width: 700px;
+  height: 300px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+a:hover{
+  transition: 0.3s;
+  background-color:orange;
+}
