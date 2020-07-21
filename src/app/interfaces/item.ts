@@ -1,5 +1,5 @@
-export interface Item  {
+export interface Item {
   number: string;
-    decision: string;
-  }
-  
+  decision: string;
+  date: Date;
+}

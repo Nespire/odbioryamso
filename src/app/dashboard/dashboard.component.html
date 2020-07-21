@@ -1,5 +1,5 @@
 <a [routerLink]="['/main']">Strona główna</a>
-
+<span>{{x}}:{{i}}</span>
 <div nz-row>
     <div nz-col nzSpan="12">
         <p style="font-size:3rem; text-align:center;">Zamówienia do odbioru</p>
@@ -7,6 +7,8 @@
             <p> <b>Numer zamówienia:</b> {{ order.number | json }}
             </p>
             <p> <b>Info:</b> {{ order.decision | json }}
+            </p>
+            <p> <b>Czas: </b>{{order.date* 1000| date:'mediumTime'}}
             </p>
             <a (click)=deleteOrder(order.id)>Usuń</a>
         </div>

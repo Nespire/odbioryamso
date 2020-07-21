@@ -4,7 +4,10 @@ form {
   width: 50vw;  
     text-align: center;
 }
-
+.logo{
+    margin-top:30px;
+    margin-bottom:20px;
+}
 input{
     height: 15vh;
     font-size:4rem;
@@ -18,15 +21,12 @@ input{
 label{
     width:50%;
     height: 10vh;
-    font-size:1rem;
+    font-size:1.5em;
     display:flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
-}
-label:hover{
-    background-color:orange;
-    transition: 0.3s;
+    margin-top:30px;
 }
 .container{
     display:flex;
@@ -41,6 +41,6 @@ button{
     font-size:1.5rem;
 }
 i{
-    font-size:5rem;
+    font-size:4rem;
     margin-top:150px;
 }

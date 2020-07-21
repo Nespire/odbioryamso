@@ -13,22 +13,26 @@ import { Item } from '../interfaces/item';
 export class FormOrderComponent implements OnInit {
   validateForm!: FormGroup;
   model: Item;
-
+  now: Date = new Date();
   submitForm(): void {
     for (const i in this.validateForm.controls) {
       this.validateForm.controls[i].markAsDirty();
       this.validateForm.controls[i].updateValueAndValidity();
     }
-    console.log(this.validateForm.value);
-    this.firebaseService.createOrder(this.validateForm.value);
 
+    this.model = {
+      number: this.validateForm.value.number,
+      decision: this.validateForm.value.decision,
+      date: this.now
+    }
+    this.firebaseService.createOrder(this.model);
     this.router.navigateByUrl('/main');
 
   }
 
   constructor(
-    private fb: FormBuilder, 
-    private router: Router, 
+    private fb: FormBuilder,
+    private router: Router,
     private firebaseService: CrudService,
   ) { }
 

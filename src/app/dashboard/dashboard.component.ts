@@ -18,19 +18,35 @@ export class DashboardComponent implements OnInit {
   ) {
 
   }
+  i=1;
+  x=1;
   ngOnInit() {
+   
     this.firebaseService.getOrders().subscribe(data => {
       this.listOfOrder = data.map(e => {
         return {
           id: e.payload.doc.id,
           ...e.payload.doc.data()
         } as Item
-      })
-      console.log(this.listOfOrder)
+      }) 
+      setInterval(() => {
+        this.listOfOrder.forEach(element => {
+          let now=new Date();
+          let secounds,minutes;
+          secounds=now.getUTCSeconds();
+          minutes=now.getUTCMinutes();
 
+          this.i=secounds;
+          this.x=minutes;
+
+          console.log(now.getUTCMinutes())
+          console.log(now.getUTCSeconds())
+  
+          console.log(element.date);
+        });      }, 1000);
+      
     })
     this.firebaseService.getRMA().subscribe(data => {
-      console.log(data);
       this.listOfRMA = data.map(e => {
         return {
           id: e.payload.doc.id,
@@ -38,7 +54,6 @@ export class DashboardComponent implements OnInit {
         } as Item
       })
     })
-    console.log(this.listOfRMA)
 
 
   }

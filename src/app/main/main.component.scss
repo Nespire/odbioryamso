@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  margin-top:40px;
   &_order {
     border-radius: 50px;
     font-size: 3rem;
@@ -23,7 +23,6 @@
 
   &_service {
     border-radius: 50px;
-
     font-size: 3rem;
     border: none;
     color: black;
@@ -41,4 +40,7 @@ a {
 a:hover{
   transition: 0.3s;
   background-color:orange;
+}
+.logo{
+  margin-top:80px;
 }

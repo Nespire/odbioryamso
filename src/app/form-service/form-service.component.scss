@@ -4,7 +4,10 @@ form {
     width: 50vw;  
       text-align: center;
   }
-  
+  .logo{
+      margin-top:30px;
+      margin-bottom:20px;
+  }
   input{
       height: 15vh;
       font-size:4rem;
@@ -18,18 +21,19 @@ form {
   label{
       width:50%;
       height: 10vh;
-      font-size:1rem;
-  }
-  label:hover{
-      background-color:orange;
-      transition: 0.3s;
+      font-size:1.5em;
+      display:flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+      margin-top:30px;
   }
   .container{
       display:flex;
       flex-direction: column;
       justify-items: center;
       align-items: center;
-  
+      text-align: center;
   }
   button{
       width:50vw;
@@ -37,7 +41,7 @@ form {
       font-size:1.5rem;
   }
   i{
-      font-size:5rem;
+      font-size:4rem;
       margin-top:150px;
   }
   

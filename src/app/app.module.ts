@@ -22,6 +22,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuardService } from './shared/auth-guard.service';
 import { AuthService } from './shared/auth.service';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { StartpageComponent } from './startpage/startpage.component';
 
 registerLocaleData(pl);
 
@@ -34,6 +35,7 @@ registerLocaleData(pl);
     MainComponent,
     EndComponent,
     LoginComponent,
+    StartpageComponent,
     
   ],
   imports: [

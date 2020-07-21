@@ -15,10 +15,9 @@
 
       <nz-form-item>
         <nz-radio-group formControlName="decision" class="decision">
-          <label nz-radio nzValue="Chce tylko odebrac zamowienie"><span>Chcę tylko odebrać zamówienie</span>
+          <label nz-radio nzValue="Chce odebrac oplacone zamowienie"><span>Chcę odebrać opłacone zamówienie</span>
             </label>
-          <label nz-radio nzValue="Chce odebrac zamowienie i potrzebuje pomocy sprzedawcy">Chcę odebrać zamówienie i mam
-            dodatkowe pytania</label>
+          <label nz-radio nzValue="Chce odebrac nieoplacone zamowienie">Chcę odebrać nieopłacone zamówienie</label>
         </nz-radio-group>
       </nz-form-item>
 
@@ -31,5 +30,5 @@
 
     </form>
 
-    <i nz-icon nzType="rollback" nzTheme="outline" [routerLink]="['/main']"></i>
+    <i nz-icon nzType="rollback" nzTheme="outline" [routerLink]="['/startpage']"></i>
   </div>
