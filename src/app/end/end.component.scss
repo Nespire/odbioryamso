@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  justify-content: center;
+
+  p {
+    font-size: 2rem;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  animation: anim 0.5s alternate  ease-in;
+
+}
+
+i {
+  font-size: 20rem;
+  color: green;
+  margin-bottom: 100px;
+}
+
+@keyframes anim {
+  0% {
+    transform: scale(0.8);
+
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.0);
+
+    opacity: 1;
+  }
+}
+
+button {
+  width: 400px;
+  height: 100px;
+  margin-right: 10px;
+  background: rgb(255, 222, 0);
+  background: radial-gradient(circle, rgba(255, 222, 0, 1) 0%, rgba(255, 177, 12, 1) 100%);
+  color: black;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.5rem;
+}

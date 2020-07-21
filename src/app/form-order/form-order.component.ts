@@ -26,7 +26,7 @@ export class FormOrderComponent implements OnInit {
       date: this.now
     }
     this.firebaseService.createOrder(this.model);
-    this.router.navigateByUrl('/main');
+    this.router.navigateByUrl('/end');
 
   }
 
@@ -41,5 +41,8 @@ export class FormOrderComponent implements OnInit {
       number: [null, [Validators.required]],
       decision: [null, [Validators.required]]
     });
+    setTimeout(() => {
+      this.router.navigateByUrl('/startpage');
+    }, 30000);
   }
 }

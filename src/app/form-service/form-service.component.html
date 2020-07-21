@@ -2,12 +2,12 @@
   <div class="logo">
     <img src="../assets/amso_logo.png" alt="">
   </div>
-  <form nz-form [nzLayout]="''" [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <form nz-form  [nzLayout]="''" [formGroup]="validateForm" (ngSubmit)="submitForm()">
 
     <nz-form-item>
       <nz-form-control nzErrorTip="Potrzebujemy twojego numeru zamówienia!">
         <nz-input-group >
-          <input formControlName="number" nz-input placeholder="Wpisz tutaj numer RMA" />
+          <input formControlName="number" maxlength="10" nz-input placeholder="Wpisz tutaj numer RMA" />
         </nz-input-group>
       </nz-form-control>
     </nz-form-item>
@@ -30,5 +30,7 @@
 
   </form>
 
-  <i nz-icon nzType="rollback" nzTheme="outline" [routerLink]="['/startpage']"></i>
+  <i nz-icon nzType="rollback" nzTheme="outline" [routerLink]="['/main']"></i>
+  <p [routerLink]="['/main']">Wróć do porzedniej strony</p>
+
 </div>

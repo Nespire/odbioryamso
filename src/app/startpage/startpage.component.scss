@@ -1,4 +1,52 @@
-img{
-    width: 100vw;
+.container {
+  display: flex;
+  flex-direction: row;
+
+  .tomek {
     height: 100vh;
+  }
+
+  button {
+    width: 500px;
+    height: 200px;
+    margin-top: 50px;
+  }
+
+  font-size:2rem;
+
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  .start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+
+    button {
+      background: rgb(255, 222, 0);
+      background: radial-gradient(circle, rgba(255, 222, 0, 1) 0%, rgba(255, 177, 12, 1) 100%);
+          color: black;
+      border-radius: 50px;
+      border: none;
+      transition: all .2s ease-in-out;
+      animation: anim 2s alternate infinite ease-in;
+
+    }
+  }
+}
+
+@keyframes anim {
+  0% {
+    transform: scale(1.0);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
 }

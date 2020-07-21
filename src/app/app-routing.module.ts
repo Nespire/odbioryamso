@@ -16,7 +16,7 @@ const routes: Routes = [
 
   { path: 'main', component: MainComponent, /*canActivate: [AuthGuardService]*/},
   { path: 'form-order', component: FormOrderComponent },
-  { path: 'form-component', component: FormServiceComponent },
+  { path: 'form-service', component: FormServiceComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'startpage', component: StartpageComponent },
 

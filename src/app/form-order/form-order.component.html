@@ -7,7 +7,7 @@
       <nz-form-item>
         <nz-form-control nzErrorTip="Potrzebujemy twojego numeru zamówienia!">
           <nz-input-group>
-            <input formControlName="number" nz-input placeholder="Wpisz tutaj numer zamówienia" />
+            <input formControlName="number" maxlength="10" nz-input placeholder="Wpisz tutaj numer zamówienia" />
           </nz-input-group>
         </nz-form-control>
       </nz-form-item>
@@ -30,5 +30,6 @@
 
     </form>
 
-    <i nz-icon nzType="rollback" nzTheme="outline" [routerLink]="['/startpage']"></i>
+    <i nz-icon nzType="rollback" nzTheme="outline" [routerLink]="['/main']"></i>
+    <p  [routerLink]="['/main']">Wróć do porzedniej strony</p>
   </div>

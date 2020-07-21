@@ -20,6 +20,7 @@ export class DashboardComponent implements OnInit {
   }
   i=1;
   x=1;
+  countOrder;countRMA;
   ngOnInit() {
    
     this.firebaseService.getOrders().subscribe(data => {
@@ -29,6 +30,8 @@ export class DashboardComponent implements OnInit {
           ...e.payload.doc.data()
         } as Item
       }) 
+      this.countOrder=this.listOfOrder.length;
+      /*
       setInterval(() => {
         this.listOfOrder.forEach(element => {
           let now=new Date();
@@ -44,7 +47,7 @@ export class DashboardComponent implements OnInit {
   
           console.log(element.date);
         });      }, 1000);
-      
+      */
     })
     this.firebaseService.getRMA().subscribe(data => {
       this.listOfRMA = data.map(e => {
@@ -53,6 +56,8 @@ export class DashboardComponent implements OnInit {
           ...e.payload.doc.data()
         } as Item
       })
+      this.countRMA=this.listOfRMA.length;
+
     })
 
 

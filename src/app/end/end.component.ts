@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class EndComponent implements OnInit {
 
-  goToHome(){
+  goToHome() {
     this.router.navigateByUrl('/end');
   }
 
@@ -16,8 +16,14 @@ export class EndComponent implements OnInit {
 
   ngOnInit() {
 
-    setTimeout(
-      this.goToHome
-    , 2000);
+    //setTimeout(this.goToHome, 2000);
+
+    setTimeout(() => {
+      this.router.navigateByUrl('/startpage');
+    }, 10000);
+
   }
+
+
+
 }
