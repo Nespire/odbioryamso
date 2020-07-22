@@ -38,7 +38,8 @@ registerLocaleData(pl);
     StartpageComponent,
     
   ],
-  imports: [
+  imports: [    
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     BrowserModule,
     AppRoutingModule,
     NgZorroAntdModule,
@@ -49,7 +50,6 @@ registerLocaleData(pl);
     RouterLinkDelayModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [{ provide: NZ_I18N, useValue: pl_PL }, AuthService ],
   bootstrap: [AppComponent]
